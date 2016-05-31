@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite-Wiki" verbose="1" parallel="tests">
+
+
+    <test name="Test-Wiki-FF" >
+        <parameter name="browser" value="FF" />
+        <classes>
+
+            <class name="com.test.WikiTest" />
+            <class name="com.test.SelTestCase" />
+
+        </classes>
+    </test>
+
+
+    <test name="Test-Wiki-Chrome" >
+        <parameter name="browser" value="CHROME" />
+        <classes>
+
+            <class name="com.test.WikiTest" />
+            <class name="com.test.SelTestCase" />
+
+        </classes>
+    </test>
+
+
+
+</suite>
