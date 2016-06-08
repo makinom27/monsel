@@ -7,10 +7,18 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import utility.ConfigReader;
+
+import java.io.FileNotFoundException;
 
 public class HomePage {
 
     WebDriver driver;
+
+    public HomePage(WebDriver driver) throws FileNotFoundException {
+
+        this.driver=driver;
+    }
 
 
     //@FindBy(css = "input#searchInput")
@@ -26,10 +34,7 @@ public class HomePage {
 
 
 
-    public HomePage(WebDriver driver){
 
-        this.driver=driver;
-    }
 
 
     public  void searchFor(String searchtext){

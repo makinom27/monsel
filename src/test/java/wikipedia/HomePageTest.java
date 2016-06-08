@@ -13,11 +13,12 @@ public class HomePageTest extends WikipediaTestSetup{
 
 
     public void searchForText() throws InterruptedException {
-        HomePage hp = PageFactory.initElements(driver, HomePage.class);
 
+        HomePage hp = PageFactory.initElements(driver, HomePage.class);
         hp.searchFor("selenium software");
         hp.clicksearch();
         SearchResultsPage rp = PageFactory.initElements(driver,SearchResultsPage.class);
+
         rp.clickFirstLink();
         System.out.println("clicked the first link too");
 
